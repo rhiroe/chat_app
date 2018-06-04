@@ -1,0 +1,8 @@
+<div>
+  <ul>
+    <% @rooms.each do |room| %>
+      <li><%=link_to "ROOM#{room.id}", "/rooms/#{room.id}" %></li>
+    <% end %>
+  </ul>
+  <li><%=link_to "NEW ROOM", "/rooms/new" %></li>
+</div>
