@@ -1,8 +1,10 @@
 <h1>Chat room</h1>
+<%= current_user.email %>
+<div id="messages", data-room_id="<%= @room.id %>">
+  <%= @room.id %>
+  <%= render @messages %>
+</div>
 <form>
   <label>Say something:</label><br>
   <input type="text" data-behavior="room_speaker">
 </form>
-<div id="messages">
-  <%= render @messages %>
-</div>
