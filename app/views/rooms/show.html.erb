@@ -1,7 +1,7 @@
 <h1>Chat room</h1>
-<%= current_user.email %>
+User Email:<%= current_user.email %>
 <div id="messages", data-room_id="<%= @room.id %>">
-  <%= @room.id %>
+  Room No.<%= @room.id %>
   <%= render @messages %>
 </div>
 <form>
