@@ -15,9 +15,9 @@ ActionCable
 Devise
 
 * Branch  
-devise+action_cable: + Devise
-↓ Not yet
-action_cable: action_cable only
+devise+action_cable: + Devise  
+↓ Not yet  
+action_cable: action_cable only  
 master: LINE style application
 
 Here's an article on this.(Language: Japanese)  
