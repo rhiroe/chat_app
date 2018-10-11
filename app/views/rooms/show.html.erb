@@ -1,5 +1,8 @@
 <h1>Chat room</h1>
+
 User Email:<%= current_user.email %>
+
+<!-- カスタムデータ属性にルームIDを格納し、js側で利用する -->
 <div id="messages", data-room_id="<%= @room.id %>">
   Room No.<%= @room.id %>
   <%= render @messages %>
