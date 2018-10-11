@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is application that can chat with asynchronous bidirectional communication.
 
-Things you may want to cover:
+* Ruby version  
+2.5.1
 
-* Ruby version
+* Rails version  
+5.2.1
 
-* System dependencies
+* Used technology  
+ActionCable
 
-* Configuration
+* Used gem  
+devise
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Here's an article on this.(Language: Japanese)
+https://qiita.com/eRy-sk/items/4c4e983e34a44c5ace27
