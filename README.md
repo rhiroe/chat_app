@@ -14,5 +14,11 @@ ActionCable
 * Used gem  
 Devise
 
+* Branch  
+devise+action_cable: + Devise
+↓ Not yet
+action_cable: action_cable only
+master: LINE style application
+
 Here's an article on this.(Language: Japanese)  
 https://qiita.com/eRy-sk/items/4c4e983e34a44c5ace27
