@@ -1,17 +1,17 @@
 class RoomsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user! # Deviseのメソッド
 
   def home
-    @rooms = Room.all
+    @rooms = Room.all.order(:id)
   end
 
   def new
-    Room.create()
+    Room.create
     redirect_to root_path
   end
 
   def show
     @room = Room.find(params[:room_id])
-    @messages = @room.messages
+    @messages = @room.messages.order(:created_at)
   end
 end

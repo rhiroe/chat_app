@@ -7,7 +7,8 @@ class RoomChannel < ApplicationCable::Channel
     # Any cleanup needed when channel is unsubscribed
   end
 
-  def speak(data)  # current_userを定義しないとNameErrorになる(current_userがchannelで使えない)
+  def speak(data)
+    # channelではdeviseで作成されたcurrent_userは使用できない
     Message.create!(content: data['message'], user_id: current_user.id, room_id: params['room_id'])
   end
 end

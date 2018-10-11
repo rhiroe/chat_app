@@ -1,22 +1,24 @@
 document.addEventListener 'turbolinks:load', ->
   App.room = App.cable.subscriptions.create { channel: "RoomChannel", room_id: $('#messages').data('room_id') },
     connected: ->
-      console.log("connected OK")
       # Called when the subscription is ready for use on the server
 
     disconnected: ->
       # Called when the subscription has been terminated by the server
 
     received: (data) ->
-      console.log("received OK")
+      # メッセージをブロードキャストで受け取った時
+      # id=messagesにdata['message']を表示させる
       $('#messages').append data['message']
 
     speak: (message)->
-      @perform 'speak', message: message #@perform 'speak'でRoomChannelのspeakアクションが呼ばれる
+      # メッセージが送信された時
+      # コンシューマになったRoomChannelのspeakアクションが呼ばれる
+      @perform 'speak', message: message
 
   $(document).on 'keypress', '[data-behavior~=room_speaker]', (event) ->
-    console.log("keypress OK")
-    if event.keyCode is 13 # return = send
-      App.room.speak event.target.value #returnを押すとここで上のspeakが呼ばれる
+    if event.keyCode is 13 # returnキーで送信されるようにする
+      #returnキーを押すとここで上のApp.roomの:speakが呼ばれる
+      App.room.speak event.target.value
       event.target.value = ''
       event.preventDefault()
