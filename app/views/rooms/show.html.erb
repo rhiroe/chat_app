@@ -7,8 +7,10 @@
     <div id="messages", data-room_id="<%= @room.id %>"></div>
     <%= render @messages %>
   </div>
-  <div class="input">
-    <textarea class="center-block" type="text" data-behavior="room_speaker" style="margin-bottom: 20px; width: 100%; max-width: 500px;"></textarea>
-    <button class='chat_submit' type="button">送信</button>
-  </div>
+  <center>
+    <div class="input">
+      <textarea class="center-block" type="text" data-behavior="room_speaker" style="margin-bottom: 20px; width: 100%; max-width: 500px;"></textarea>
+      <br /><button class='chat_submit' type="button">送信</button>
+    </div>
+  </center>
 </div>
