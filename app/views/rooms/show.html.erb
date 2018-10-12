@@ -1,13 +1,16 @@
-<h1>Chat room</h1>
-
-User Email:<%= current_user.email %>
-
-<!-- カスタムデータ属性にルームIDを格納し、js側で利用する -->
-<div id="messages", data-room_id="<%= @room.id %>">
-  Room No.<%= @room.id %>
-  <%= render @messages %>
+<h1>Chat room No.<%= @room.id %></h1>
+<!-- 表示の左右わけに使う閲覧ユーザー情報 -->
+<div id="show_user" data-show_user="<%= current_user.id %>"></div>
+<div class="col-md-12">
+  <div class="chat_box">
+    <!-- カスタムデータ属性にルームIDを格納し、js側で利用する -->
+    <div id="messages", data-room_id="<%= @room.id %>"></div>
+    <%= render @messages %>
+  </div>
+  <center>
+    <div class="input">
+      <textarea class="center-block" type="text" data-behavior="room_speaker" style="margin-bottom: 20px; width: 100%; max-width: 500px;"></textarea>
+      <br /><button class='chat_submit' type="button">送信</button>
+    </div>
+  </center>
 </div>
-<form>
-  <label>Say something:</label><br>
-  <input type="text" data-behavior="room_speaker">
-</form>
