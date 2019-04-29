@@ -9,8 +9,9 @@
   </div>
   <center>
     <div class="input">
-      <textarea class="center-block" type="text" data-behavior="room_speaker" style="margin-bottom: 20px; width: 100%; max-width: 500px;"></textarea>
-      <br /><button class='chat_submit' type="button">送信</button>
+      <%= text_field nil, nil, 'data-behavior': 'room_speaker', class: 'center-block', style: 'margin-bottom: 20px; width: 100%; max-width: 500px;' %>
+      <br />
+      <%= button_tag '送信', class: 'chat_submit' %>
     </div>
   </center>
 </div>
