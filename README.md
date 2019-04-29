@@ -3,10 +3,10 @@
 This is application that can chat with asynchronous bidirectional communication.
 
 * Ruby version  
-2.5.1
+2.6.3
 
 * Rails version  
-5.2.1
+5.2.3
 
 * Used technology  
 ActionCable
